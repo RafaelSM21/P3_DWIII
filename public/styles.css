@@ -1,0 +1,194 @@
+/* Reset e configurações iniciais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Temas */
+body {
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Tema claro */
+  color: #333;
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #1e1e1e, #323232); /* Tema escuro */
+  color: #f1f1f1;
+}
+
+/* Contêiner */
+.container {
+  max-width: 960px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+body.dark-mode .container {
+  background: #2c2c2c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabeçalhos */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  transition: color 0.5s;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #6a11cb; /* Cor destaque para o tema claro */
+}
+
+body.dark-mode h1 {
+  color: #68d391; /* Cor destaque no tema escuro */
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+body.dark-mode h2 {
+  color: #bbb;
+}
+
+/* Botão de alternância de tema */
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-theme button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6a11cb;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.toggle-theme button:hover {
+  color: #ffffff;
+  background-color: #68d391;
+  transform: scale(1.1);
+}
+
+body.dark-mode .toggle-theme button {
+  color: #68d391; 
+}
+
+body.dark-mode .toggle-theme button:hover {
+  color: #ffffff;
+  background-color: #6a11cb;
+}
+
+/* Formulário e inputs */
+.form-group, .btn, .table {
+  margin-bottom: 12px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+}
+
+body.dark-mode input, body.dark-mode textarea, body.dark-mode button {
+  background: #3a3a3a;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode input:focus, body.dark-mode textarea:focus {
+  box-shadow: 0 0 8px rgba(104, 211, 145, 0.5);
+}
+
+/* Botões */
+.btn-primary {
+  background: #6a11cb;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2575fc;
+}
+
+body.dark-mode .btn-primary {
+  background: #68d391;
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #9ae6b4;
+}
+
+/* Tabela */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f9f9f9;
+  transition: background-color 0.5s, color 0.5s;
+  table-layout: fixed; /* Garante que as colunas tenham largura fixa */
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+  overflow-wrap: break-word; /* Quebra palavras longas */
+  word-wrap: break-word; /* Suporte adicional para navegadores antigos */
+  white-space: normal; /* Permite quebras de linha */
+}
+
+.table th {
+  background: #6a11cb;
+  color: #fff;
+}
+
+body.dark-mode .table {
+  background: #3a3a3a;
+}
+
+body.dark-mode .table th {
+  background: #68d391;
+}
+
+body.dark-mode .table td {
+  color: #f1f1f1;
+}
+
+/* Hover na tabela */
+.table tr:hover {
+  background: #eee;
+}
+
+body.dark-mode .table tr:hover {
+  background: #444;
+}
