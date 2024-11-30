@@ -1,6 +1,4 @@
-Testar as requisições no Thunder Client
-
-http://localhost:3000/eventos
+Para testar as requisições, copie os JSONs abaixo e use esse link: http://localhost:3000/eventos
 
 POST:
 {
@@ -25,3 +23,5 @@ DELETE:
 {
     "id": "id_do_evento"  // Substitua pelo ID do evento que deseja excluir
 }
+
+Para rodar a aplicação na web, copie esse link no navegador: http://localhost:3000/
